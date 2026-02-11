@@ -10,6 +10,7 @@ html{
 nav {
 
   background-color: var(--green);
+
 }
 
 body{
@@ -142,10 +143,8 @@ nav div h3{
  top: 0;
  width: 100%;
  z-index: 1;
+
 }
-
-
-
 
 .nav-flex-container{
     display: flex;
@@ -260,6 +259,11 @@ nav div h3{
   display: none;
 }
 
+@media screen and (max-width:600px) {
+  nav-div 
+}
 
-
+@media screen and (max-width:600px) {
+  nav-div 
+}
 
