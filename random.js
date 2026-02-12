@@ -2,8 +2,8 @@
 
 //SRC's of all images you want to use
 const sectionsARR = [
-
   ];
+  
 // IDS of the section tags in html
 const sectionIDs = [
   "RunClub1",
@@ -20,9 +20,6 @@ const sectionIDs = [
 //Stores the places randomly selected to show on website
 let showSectionsARR = [];
 
-
-
-
 //=================================================================================
 
 //WHAT DO - Randomize IMGS and show them in HTML
@@ -32,7 +29,7 @@ function randomize() {
   // showSectionsARR = [];
 
 
-    for(let i = 0; i< 9;i++){
+    for(let i = 0; i< 6;i++){
 
 
     let randomNum = Math.floor(Math.random() * sectionIDs.length);
@@ -54,6 +51,8 @@ function randomize() {
   let placestring = showSectionsARR.join(" ");
   console.log(placestring);
     }
+
+
   /*
 if most recent showSectionsARR IS SAME as placeARR[randomNum]
 remove rerool
@@ -63,30 +62,30 @@ remove rerool
 
 //Finds <img> tags in HTML
 //Put the random SRCS in each tag
-function findImage() {
-  randomize();
+// function findImage() {
+//   randomize();
 
-//showSectionsARR = ["WWW.png", "NARC - Team Pic.jpeg", "internet.png"];
-let sectionLocation = document.getElementById("main")
+// //showSectionsARR = ["WWW.png", "NARC - Team Pic.jpeg", "internet.png"];
+// let sectionLocation = document.getElementById("main")
 
-for(let i = 0; i < 9;i++){
-let newSection = document.createElement('RunClub');
-newSection.id = "RunClub" + i
-sectionIDs.push("RunClub"+ i)
-sectionLocation.appendChild(newSection);
-}
+// for(let i = 0; i < 9;i++){
+// let newSection = document.createElement('RunClub');
+// newSection.id = "RunClub" + i
+// sectionIDs.push("RunClub"+ i)
+// sectionLocation.appendChild(newSection);
+// }
 
- for (let i = 0; i < sectionIDs.length; i++) 
-  {
-    //0 1 2 3 4 
-    //htmlIDs[]]
-    //find location
-    //WHERE 
-    let showID = document.getElementById(sectionIDs[i]);  //first time = <img id = "img1">
-    console.log(showID);
-    showID = showSectionsARR[i]; //set <img> SRC to the random place
-  }
-}
+//  for (let i = 0; i < sectionIDs.length; i++) 
+//   {
+//     //0 1 2 3 4 
+//     //htmlIDs[]]
+//     //find location
+//     //WHERE 
+//     let showID = document.getElementById(sectionIDs[i]);  //first time = <img id = "img1">
+//     console.log(showID);
+//     showID = showSectionsARR[i]; //set <img> SRC to the random place
+//   }
+// }
 //WHEN
 // We have an 'onload' in body on html 
 
