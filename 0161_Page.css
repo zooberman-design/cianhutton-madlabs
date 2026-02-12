@@ -259,11 +259,21 @@ nav div h3{
   display: none;
 }
 
-@media screen and (max-width:600px) {
+
+/*  THIS IS FOR GETTING YOUR WEBSITE TO FIT THE SCREEN */
+/* @media screen and (max-width:600px) {
   nav-div 
 }
 
 @media screen and (max-width:600px) {
   nav-div 
+} */
+
+
+.col1{
+/* grid template 1st */
 }
 
+.col2{
+  /* grid template 2nd */
+}

@@ -2,15 +2,7 @@
 
 //SRC's of all images you want to use
 const sectionsARR = [
-  "AncoatRunClub",
-  "DidsburyRunners",
-  "JustARunClub",
-  "ManchesterFrontrunners",
-  "MileShyClub",
-  "NotARunningClub",
-  "RedactedRunClub",
-  "SnappyRunners",
-  "TinyMoves"
+
   ];
 // IDS of the section tags in html
 const sectionIDs = [
@@ -37,28 +29,31 @@ let showSectionsARR = [];
 
 //Randomly selects 3 imgs to show on website
 function randomize() {
-  showSectionsARR = [];
+  // showSectionsARR = [];
 
-  while (showSectionsARR.length < 9) {
-    
-    let randomNum = Math.floor(Math.random() * sectionsARR.length);
 
-    let placeToPush = sectionsARR[randomNum]; 
+    for(let i = 0; i< 9;i++){
+
+
+    let randomNum = Math.floor(Math.random() * sectionIDs.length);
+
+    let placeToPush = document.getElementById(sectionIDs[i]);
+
 
     //Checks if we have the place already
-    if (showSectionsARR.includes(placeToPush)) {
-        //if we do we don't add it to our array
-      console.log("oopsis");
-    } 
-    else {
-        //if its not there already then we add it
-      showSectionsARR.push(placeToPush);
-    }
-   }
-
+  //   if (showSectionsARR.includes(placeToPush)) {
+  //       //if we do we don't add it to our array
+  //     console.log("oopsis");
+  //   } 
+  //   else {
+  //       //if its not there already then we add it
+  //     showSectionsARR.push(placeToPush);
+  //   }
+  //  }
+  placeToPush.classList.add('col'+ randomNum);
   let placestring = showSectionsARR.join(" ");
   console.log(placestring);
-
+    }
   /*
 if most recent showSectionsARR IS SAME as placeARR[randomNum]
 remove rerool
@@ -94,3 +89,7 @@ sectionLocation.appendChild(newSection);
 }
 //WHEN
 // We have an 'onload' in body on html 
+
+
+// THIS IS FOR THE NEW MAP
+// var map = L.map('map').setView([51.505, -0.09], 13);
